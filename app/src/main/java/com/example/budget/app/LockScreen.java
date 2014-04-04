@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -42,7 +44,19 @@ public class LockScreen extends Activity implements View.OnClickListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lock_screen);
+        //setContentView(R.layout.activity_lock_screen);
+
+
+        //Remove title bar
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        //Remove notification bar
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        //set content view AFTER ABOVE sequence (to avoid crash)
+        this.setContentView(R.layout.activity_lock_screen);
+
+
 
         first = (TextView) findViewById(R.id.first);
         second = (TextView) findViewById(R.id.second);
@@ -151,6 +165,7 @@ public class LockScreen extends Activity implements View.OnClickListener
             Toast.makeText(getApplicationContext(), "correct", Toast.LENGTH_SHORT).show();
             Intent temp = new Intent(this, MainActivity.class);
             startActivity(temp);
+            finish();
         }
         else if(guess.length() == 4)
         {
