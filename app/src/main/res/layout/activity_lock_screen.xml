@@ -146,7 +146,8 @@
         android:text="I AM"
         android:id="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"/>
+        android:layout_marginTop="25dp"
+        android:textStyle="bold"/>
 
      <TableRow
          android:layout_width="fill_parent"
@@ -206,6 +207,7 @@
         android:layout_below="@id/lock"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
+        android:textStyle="bold"
         />
 
 
