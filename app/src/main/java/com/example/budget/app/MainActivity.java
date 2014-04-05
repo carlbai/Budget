@@ -18,30 +18,19 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     Button mainButton;
     ListView mainListView;
-    EditText mainEditText;
-    EditText mainTotal;
-
     ArrayAdapter<Integer> mArrayAdapter;
     ArrayList<Integer> mList = new ArrayList<Integer>();
-    Integer total = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mainEditText = (EditText) findViewById(R.id.input);
-        mainTotal = (EditText) findViewById(R.id.total);
-
         mainButton = (Button) findViewById(R.id.button);
         mainButton.setOnClickListener(this);
 
         mainListView = (ListView) findViewById(R.id.main_listview);
         mArrayAdapter = new ArrayAdapter<Integer>(this, android.R.layout.simple_list_item_1, mList);
-
-
-
-
         mainListView.setAdapter(mArrayAdapter);
     }
 
@@ -69,12 +58,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        Integer transaction = Integer.parseInt(mainEditText.getText().toString());
-        total += transaction;
-
-        mainTotal.setText(String.valueOf(total));
-
-        mList.add(Integer.parseInt(mainEditText.getText().toString()));
-        mArrayAdapter.notifyDataSetChanged();
+//        Integer transaction = Integer.parseInt(mainEditText.getText().toString());
+//        mList.add(Integer.parseInt(mainEditText.getText().toString()));
+//        mArrayAdapter.notifyDataSetChanged();
     }
 }

@@ -2,12 +2,13 @@
 <resources>
 
     <string name="app_name">Budget</string>
-    <string name="hint">Transaction</string>
+    <string name="hint">Create Transaction</string>
     <string name="action_settings">Settings</string>
-    <string name="button">Press</string>
+    <string name="button">+  CREATE TRANSACTION</string>
     <string name="total">0</string>
     <string name="title_activity_lock_screen">LockScreen</string>
+    <string name="strNoRecordsFound">Add a new item now!</string>
+    <string name="title_activity_input">Input</string>
     <string name="hello_world">Hello world!</string>
-    <string name="testing">We are <b><i>so</i></b> glad to see you.</string>
-</resources>
 
+</resources>
