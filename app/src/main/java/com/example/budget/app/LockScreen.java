@@ -163,8 +163,8 @@ public class LockScreen extends Activity implements View.OnClickListener
         if(guess.equalsIgnoreCase(password))
         {
             Toast.makeText(getApplicationContext(), "correct", Toast.LENGTH_SHORT).show();
-            Intent temp = new Intent(this, MainActivity.class);
-            startActivity(temp);
+            Intent MainScreen = new Intent(this, MainActivity.class);
+            startActivity(MainScreen);
             finish();
         }
         else if(guess.length() == 4)

@@ -1,6 +1,7 @@
 package com.example.budget.app;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -61,5 +62,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 //        Integer transaction = Integer.parseInt(mainEditText.getText().toString());
 //        mList.add(Integer.parseInt(mainEditText.getText().toString()));
 //        mArrayAdapter.notifyDataSetChanged();
+
+        Intent InputActivity = new Intent(this, Input.class);
+        startActivity(InputActivity);
     }
 }
