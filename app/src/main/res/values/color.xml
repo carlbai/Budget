@@ -7,4 +7,5 @@
     <color name="black">#000000</color>
     <color name="black_light">#333</color>
     <color name="grey_light">#A1A1A1</color>
+    <color name="gre_lighter">#D3D3D3</color>
 </resources>
