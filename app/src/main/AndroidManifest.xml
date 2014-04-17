@@ -9,6 +9,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.budget.app.LockScreen"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_lock_screen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

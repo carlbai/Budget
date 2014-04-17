@@ -75,16 +75,16 @@ public class LockScreen extends Activity implements View.OnClickListener
         button9 = (Button) findViewById(R.id.button9);
 
         
-        button0.setText(Html.fromHtml("<b>" + "<big>" + "0" + "</big>" + "</b>" + "<br/>" + "<small> </small>"));
-        button1.setText(Html.fromHtml("<b>" + "<big>" + "1" + "</big>" + "</b>" + "<br/>" + "<small> </small>"));
-        button2.setText(Html.fromHtml("<b>" + "<big>" + "2" + "</big>" + "</b>" + "<br/>" + "<small> ABC</small>"));
-        button3.setText(Html.fromHtml("<b>" + "<big>" + "3" + "</big>" + "</b>" + "<br/>" + "<small> DEF</small>"));
-        button4.setText(Html.fromHtml("<b>" + "<big>" + "4" + "</big>" + "</b>" + "<br/>" + "<small> GHI</small>"));
-        button5.setText(Html.fromHtml("<b>" + "<big>" + "5" + "</big>" + "</b>" + "<br/>" + "<small> JKL</small>"));
-        button6.setText(Html.fromHtml("<b>" + "<big>" + "6" + "</big>" + "</b>" + "<br/>" + "<small> MNO</small>"));
-        button7.setText(Html.fromHtml("<b>" + "<big>" + "7" + "</big>" + "</b>" + "<br/>" + "<small> PQRS</small>"));
-        button8.setText(Html.fromHtml("<b>" + "<big>" + "8" + "</big>" + "</b>" + "<br/>" + "<small> TUV</small>"));
-        button9.setText(Html.fromHtml("<b>" + "<big>" + "9" + "</big>" + "</b>" + "<br/>" + "<small> WXYZ</small>"));
+//        button0.setText(Html.fromHtml("<b>" + "<big>" + "0" + "</big>" + "</b>" + "<br/>" + "<small> </small>"));
+//        button1.setText(Html.fromHtml("<b>" + "<big>" + "1" + "</big>" + "</b>" + "<br/>" + "<small> </small>"));
+//        button2.setText(Html.fromHtml("<b>" + "<big>" + "2" + "</big>" + "</b>" + "<br/>" + "<small> ABC</small>"));
+//        button3.setText(Html.fromHtml("<b>" + "<big>" + "3" + "</big>" + "</b>" + "<br/>" + "<small> DEF</small>"));
+//        button4.setText(Html.fromHtml("<b>" + "<big>" + "4" + "</big>" + "</b>" + "<br/>" + "<small> GHI</small>"));
+//        button5.setText(Html.fromHtml("<b>" + "<big>" + "5" + "</big>" + "</b>" + "<br/>" + "<small> JKL</small>"));
+//        button6.setText(Html.fromHtml("<b>" + "<big>" + "6" + "</big>" + "</b>" + "<br/>" + "<small> MNO</small>"));
+//        button7.setText(Html.fromHtml("<b>" + "<big>" + "7" + "</big>" + "</b>" + "<br/>" + "<small> PQRS</small>"));
+//        button8.setText(Html.fromHtml("<b>" + "<big>" + "8" + "</big>" + "</b>" + "<br/>" + "<small> TUV</small>"));
+//        button9.setText(Html.fromHtml("<b>" + "<big>" + "9" + "</big>" + "</b>" + "<br/>" + "<small> WXYZ</small>"));
 
 
         button0.setOnClickListener( new View.OnClickListener(){

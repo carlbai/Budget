@@ -9,6 +9,25 @@
     <string name="title_activity_lock_screen">LockScreen</string>
     <string name="strNoRecordsFound">Add a new item now!</string>
     <string name="title_activity_input">Input</string>
-    <string name="hello_world">Hello world!</string>
+
+
+    <string name="multilines">Line1Line1\nLine2Line2</string>
+
+
+
+    <string name="lockmessage1">I AM</string>
+    <string name="lockmessage2">LOCKED</string>
+    <string name="fix">\n</string>
+    <string name="number0">0\n</string>
+    <string name="number1">1\n</string>
+    <string name="number2">2\nABC</string>
+    <string name="number3">3\nDEF</string>
+    <string name="number4">4\nGHI</string>
+    <string name="number5">5\nJKL</string>
+    <string name="number6">6\nMNO</string>
+    <string name="number7">7\nPQRS</string>
+    <string name="number8">8\nTUV</string>
+    <string name="number9">9\nWXYZ</string>
+
 
 </resources>

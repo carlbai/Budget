@@ -6,6 +6,7 @@
 
 
     <TextView
+        android:id="@+id/display"
         android:text="0"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -239,7 +240,7 @@
                 android:textStyle="bold"
                 />
             <Button
-                android:id="@+id/button."
+                android:id="@+id/buttonDecimal"
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:gravity="center_horizontal|center_vertical"
