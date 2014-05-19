@@ -63,6 +63,7 @@ public class LockScreen extends Activity implements View.OnClickListener
         third = (TextView) findViewById(R.id.third);
         fourth = (TextView) findViewById(R.id.fourth);
 
+        //This can be fixed... kinda silly
         button0 = (Button) findViewById(R.id.button0);
         button1 = (Button) findViewById(R.id.button1);
         button2 = (Button) findViewById(R.id.button2);
