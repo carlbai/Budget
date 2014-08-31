@@ -7,6 +7,7 @@ import android.text.Layout;
 import android.text.Spannable;
 import android.text.style.AlignmentSpan;
 import android.text.style.ForegroundColorSpan;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,6 +15,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+
+import org.javia.arity.SyntaxException;
 
 import java.text.DecimalFormat;
 
@@ -25,14 +28,16 @@ public class Input extends ActionBarActivity implements View.OnClickListener {
     private static final String DIGITS = "0123456789.";
     private Calculate calculate;
     private boolean operation = true;
+    private boolean empty = true;
     DecimalFormat df = new DecimalFormat("@###########");
-    int maxNumbers = 8;
+    private static final String TAG = "MyActivity";
+    //int maxNumbers = 8;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         //Remove title bar
-        this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
 
         //Remove notification bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -66,6 +71,7 @@ public class Input extends ActionBarActivity implements View.OnClickListener {
         findViewById(R.id.buttonMinus).setOnClickListener(this);
         findViewById(R.id.buttonPlus).setOnClickListener(this);
         findViewById(R.id.buttonDecimal).setOnClickListener(this);
+        findViewById(R.id.buttonEquals).setOnClickListener(this);
     }
 
 
@@ -93,61 +99,70 @@ public class Input extends ActionBarActivity implements View.OnClickListener {
     public void onClick(View v)
     {
         String buttonPressed = ((Button) v).getText().toString();
-
+        Log.v(TAG, buttonPressed);
         //number was pressed
         if (DIGITS.contains(buttonPressed))
         {
+            Log.v(TAG, "digit");
             if (buttonPressed.equals(".") && display.getText().toString().contains("."))
             {
                 //NO DOUBLE DECIMAL POINTS!
             }
             else
             {
-                if(maxNumbers > 0)
+                if(display.getText().equals("0"))
                 {
-                    if(display.getText().equals("0"))
-                    {
-                        display.setText(buttonPressed);
-                    }
-                    else
-                    {
-                        operation = false;
-                        display.append(buttonPressed);
-                        maxNumbers --;
-                    }
+                    display.setText(buttonPressed);
+                }
+                else
+                {
+                    operation = false;
+                    empty = false;
+                    display.append(buttonPressed);
                 }
             }
         }
         else
         {
+            Log.v(TAG, "operator");
             if(buttonPressed.equals("="))
             {
+                Log.v(TAG, "equals");
                 //calculated
+                try {
+                    display.setText(Calculate.evaluate(display.getText().toString()));
+                } catch (SyntaxException e) {
+                    e.printStackTrace();
+                }
             }
             else if(buttonPressed.equals("C"))
             {
-                display.setText("0");
+                display.setText("");
+                empty = true;
             }
             else
             {
-                if(!operation)
+                if(!operation && !empty)
                 {
                     appendColoredText(display, buttonPressed, getResources().getColor(R.color.blue_light));
                     operation = true;
                 }
                 else
                 {
-                    //change
-                    String temp = String.valueOf(display.getText());
-                    if (temp.length() > 0) {
-                        temp = temp.substring(0, temp.length()-1);
-
+                    if(!empty)
+                    {
+                        //change
+                        String temp = String.valueOf(display.getText());
+                        if (temp.length() > 0)
+                        {
+                            temp = temp.substring(0, temp.length()-1);
+                        }
+                        display.setText(temp);
+                        appendColoredText(display, buttonPressed, getResources().getColor(R.color.blue_light));
                     }
-                    display.setText(temp);
-                    appendColoredText(display, buttonPressed, getResources().getColor(R.color.blue_light));
+
                 }
             }
-            maxNumbers = 8;
         }
 
     }

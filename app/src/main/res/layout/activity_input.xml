@@ -7,13 +7,14 @@
 
     <TextView
         android:id="@+id/display"
-        android:text="0"
+        android:text=""
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center|right"
         android:textSize="45sp"
         android:paddingRight="20dp"
+        android:paddingLeft="20dp"
         />
 
 
@@ -70,7 +71,7 @@
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:gravity="center_horizontal|center_vertical"
-                android:text="/"
+                android:text="÷"
                 android:layout_weight="1"
                 android:textColor="@color/blue_light"
                 android:textStyle="bold"
@@ -119,7 +120,7 @@
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:gravity="center_horizontal|center_vertical"
-                android:text="x"
+                android:text="×"
                 android:layout_weight="1"
 
                 android:textColor="@color/blue_light"
@@ -169,7 +170,7 @@
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:gravity="center_horizontal|center_vertical"
-                android:text="-"
+                android:text="−"
                 android:layout_weight="1"
                 android:textColor="@color/blue_light"
                 android:textStyle="bold"/>
