@@ -29,8 +29,11 @@ public class Input extends ActionBarActivity implements View.OnClickListener {
     private Calculate calculate;
     private boolean operation = true;
     private boolean empty = true;
+    private boolean finish = true;
     DecimalFormat df = new DecimalFormat("@###########");
     private static final String TAG = "MyActivity";
+
+
     //int maxNumbers = 8;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,10 +130,16 @@ public class Input extends ActionBarActivity implements View.OnClickListener {
             Log.v(TAG, "operator");
             if(buttonPressed.equals("="))
             {
+                if(finish)
+                {
+                    //new thing
+                    Log.v(TAG, "finish");
+                }
                 Log.v(TAG, "equals");
                 //calculated
                 try {
                     display.setText(Calculate.evaluate(display.getText().toString()));
+                    finish = true;
                 } catch (SyntaxException e) {
                     e.printStackTrace();
                 }
@@ -139,6 +148,7 @@ public class Input extends ActionBarActivity implements View.OnClickListener {
             {
                 display.setText("");
                 empty = true;
+                finish = true;
             }
             else
             {
@@ -162,6 +172,7 @@ public class Input extends ActionBarActivity implements View.OnClickListener {
                     }
 
                 }
+                finish = false;
             }
         }
 
