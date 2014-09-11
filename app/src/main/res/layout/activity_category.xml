@@ -9,8 +9,30 @@
     tools:context="com.example.budget.app.Category">
 
     <TextView
-        android:text="@string/hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello World"
+        android:textSize="32sp"
+        />
+
+    <Spinner
+        android:spinnerMode="dialog"
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/category_array"
+        android:prompt="@string/category_prompt"
+        android:layout_below="@+id/text"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/button"
+        android:layout_below="@+id/spinner1"
+        />
+
 
 </RelativeLayout>

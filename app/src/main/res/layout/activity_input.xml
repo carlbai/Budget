@@ -40,11 +40,11 @@
                 android:layout_height="fill_parent"
                 android:text="C"
                 android:gravity="center_horizontal|center_vertical"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:textColor="@color/blue_light"
                 android:textStyle="bold"
                 />
-
+<!--
             <Button
                 android:id="@+id/buttonTIP"
                 android:layout_width="0dp"
@@ -55,7 +55,7 @@
                 android:textColor="@color/blue_light"
                 android:textStyle="bold"
                 />
-
+-->
             <Button
                 android:id="@+id/buttonPercent"
                 android:layout_width="0dp"

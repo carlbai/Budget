@@ -1,5 +1,6 @@
 package com.example.budget.app;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -67,7 +68,7 @@ public class Input extends ActionBarActivity implements View.OnClickListener {
 
         //Operations
         findViewById(R.id.buttonC).setOnClickListener(this);
-        findViewById(R.id.buttonTIP).setOnClickListener(this);
+        //findViewById(R.id.buttonTIP).setOnClickListener(this);
         findViewById(R.id.buttonPercent).setOnClickListener(this);
         findViewById(R.id.buttonDivide).setOnClickListener(this);
         findViewById(R.id.buttonTimes).setOnClickListener(this);
@@ -134,6 +135,11 @@ public class Input extends ActionBarActivity implements View.OnClickListener {
                 {
                     //new thing
                     Log.v(TAG, "finish");
+
+                    Intent i = new Intent(getApplicationContext(), Category.class);
+                    i.putExtra("amount", display.getText().toString());
+                    startActivity(i);
+
                 }
                 Log.v(TAG, "equals");
                 //calculated

@@ -26,4 +26,22 @@
     <string name="title_activity_category">Category</string>
     <string name="hello_world">Hello world!</string>
 
+
+    <string name="category_prompt">Choose a category</string>
+    <string-array name="category_array">
+        <item>Food</item>
+        <item>Beverage</item>
+        <item>Grocery</item>
+        <item>Rent</item>
+        <item>Health</item>
+        <item>Internet</item>
+        <item>Electric</item>
+        <item>Water</item>
+        <item>Entertainment</item>
+        <item>Gas</item>
+        <item>Parking</item>
+    </string-array>
+
+
+
 </resources>
